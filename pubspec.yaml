@@ -87,3 +87,15 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+fonts:
+  - family: Montserat_Alt
+    fonts:
+      - asset: fonts/MontserratAlternates-Bold.ttf
+        style: bold
+      - asset: fonts/MontserratAlternates-Medium.ttf
+        style: medium
+      - asset: fonts/MontserratAlternates-Regular.ttf
+        style: regular
+      - asset: fonts/MontserratAlternates-Thin.ttf
+        style: thin
