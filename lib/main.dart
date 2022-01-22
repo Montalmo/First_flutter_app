@@ -1,39 +1,37 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+  home: UserPanel(),
+));
 
-
-class MyApp extends StatelessWidget {
+class UserPanel extends StatelessWidget {
+  const UserPanel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      //theme: ThemeData(primaryColor: Colors.deepOrangeAccent),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('First Application', style: TextStyle(
-            fontSize: 17,
-            fontFamily: 'Montserat_Alt',
-          ),),
+    return Scaffold(
+      backgroundColor: Colors.white60,
+      appBar: AppBar(
+        title: Text('Application'),
         centerTitle: true,
-          backgroundColor: Colors.deepOrange,
-        ),
-        body: Center(
-          child: Text('My application', style: TextStyle(
-            fontSize: 14,
-            color: Colors.blueGrey,
-            fontFamily: 'Montserat_Alt',
-            fontWeight: FontWeight.normal,
-          ),),
-        ),
-       floatingActionButton: FloatingActionButton(
-         onPressed: () {
-           print('Clicked');
-         },
-         child: Text('OK'),
-         backgroundColor: Colors.deepOrange,
-       ),
+        backgroundColor: Colors.blueGrey,
       ),
+      body: SafeArea(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              CircleAvatar(
+                backgroundImage: AssetImage('assets/53d189dfcd54fa9ecae756ddf5a7c2ee.jpg'),
+              ),
+              Text('John Doe'),
+              ],
+            ),
+          ],
+        ),
+        ),
     );
   }
 }
